@@ -1,3 +1,11 @@
+WordPress Taiga Boilerplate theme
+=================================
+
+I am using the Taiga Boilerplate te work on a WordPress theme, so you always have a responsive WordPress framework to build great WordPress themes. 
+I am using the Hybrid Core of Justin Tadlock for some WordPress awesomeness.
+
+Beneath is the story of the Taiga Boilerplate builder Aljan of Studio Wolf.
+
 Taiga Boilerplate
 ====================
 
