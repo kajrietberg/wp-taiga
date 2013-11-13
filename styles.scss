@@ -1,0 +1,38 @@
+﻿//  Taiga Boilerplate
+//  Copyright 2013 by Studio Wolf
+//  Licensed under the MIT license
+
+//  Run the following SASS command: 'sass --watch stylesheets --style compressed'
+//  Make sure you set the variables below (find the grid documentation in core/_grid.scss)
+
+// =========== Includes
+
+// Core
+@import "stylesheets/core/_settings"; // Set up your settings and variables first
+@import "stylesheets/core/_mixins";
+@import "stylesheets/core/_grid";
+@import "stylesheets/core/_base";
+@import "stylesheets/core/_states";
+@import "stylesheets/core/_layout";
+
+// Modules
+// Modules are connected to a specific piece of content and can't be used without it. Example: the module 'product' can't be used for a 'blog-article'.
+@import "stylesheets/modules/_product";
+
+// Shared components
+// Components can be used generic through the application and are not connected to content. Example: the component 'buttons' can be used in module 'product', 'blog-article' etc.
+@import "stylesheets/shared-components/_figure";
+@import "stylesheets/shared-components/_quote";
+@import "stylesheets/shared-components/_forms";
+@import "stylesheets/shared-components/_tables";
+@import "stylesheets/shared-components/_labels";
+@import "stylesheets/shared-components/_buttons";
+@import "stylesheets/shared-components/_icons";
+@import "stylesheets/shared-components/_messages";
+@import "stylesheets/shared-components/_pagination";
+@import "stylesheets/shared-components/_modal";
+@import "stylesheets/shared-components/_tabs";
+@import "stylesheets/shared-components/_panels";
+
+// Print
+@import "stylesheets/core/_print";
