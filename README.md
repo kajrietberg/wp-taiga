@@ -7,8 +7,11 @@ All the WordPress awesomeness is put in the functions.php and some are used in t
 
 The Hybrid core functionality I did put in is:
 1. Theme support for the framework widgets.
+
 2. Theme support for the framework shortcodes.
+
 3. Theme support for the Hybrid Template Hierarchy which is more flexible.
+
 4. Theme support for sidebars from Hybrid core (you can also put in sidebars yourself in the functions.php.) 	Put in are primary, secondary and subsidiary. If you want more, put in the template files for these 		sidebars. 
 	*	primary: Typically shown on the side of the page as the main sidebar.
 	*	secondary: Typically shown on the side of the page within three-column layouts or as an alternative 
@@ -18,6 +21,7 @@ The Hybrid core functionality I did put in is:
 	*	before-content: Should be shown directly before the post content on a page.
 	*	after-content: Should be shown directly after the post content on a page.
 	*	after-singular: all post types that are displayed on the front end of the site.
+
 5. Theme support for menus. (Put in are: primary, secondary and subsidiary.)
 	*	primary:    Typically located before, within, or after the header area.
 	*	secondary:    Typically located before, within, or after the header area. However, it should be
