@@ -43,6 +43,7 @@ The first part of the functions.php is Hybrid core functionality, after that par
 
 
 
+
 Beneath is the story of the Taiga Boilerplate builder Aljan of Studio Wolf.
 
 Taiga Boilerplate
