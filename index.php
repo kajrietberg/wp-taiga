@@ -1,37 +1,19 @@
-﻿<!DOCTYPE HTML>
-<html lang="nl">
+﻿
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="apple-mobile-web-app-title" content="" />
-    <meta name="msapplication-TileImage" content="windows-icon.png" />
-    <meta name="msapplication-TileColor" content="#4fca96" />
+<?php get_header(); // Loads the header.php template. ?>
 
-    <title>Home - Project</title>
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <div id="content" class="hfeed">
 
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+        <?php get_template_part( 'loop-meta' ); // Loads the loop-meta.php template. ?>
 
-    <link rel="stylesheet" href="stylesheets/styles.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="apple-icon.png" />
-</head>
+        <?php get_template_part( 'loop' ); // Loads the loop.php template. ?>
 
-<body>
+        <?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
 
-    <div class="l-container">
-        <p>Hi, this is Taiga Boilerplate. Find basic modules and examples in <a href="modules.html">modules.html</a></p>
-    </div>
+    </div><!-- #content -->
 
-    <!-- Scripts -->
-    <script src="scripts/jquery-2.0.3.min.js"></script>
-    <script src="scripts/interface.js"></script>
+<?php get_footer(); // Loads the footer.php template. ?>
 
-</body>
-
-</html>
+    
+        
+   

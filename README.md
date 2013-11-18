@@ -2,7 +2,46 @@ WordPress Taiga Boilerplate theme
 =================================
 
 I am using the Taiga Boilerplate te work on a WordPress theme, so you always have a responsive WordPress framework to build great WordPress themes. 
-I am using the Hybrid Core of Justin Tadlock for some WordPress awesomeness.
+I am using the Hybrid Core of Justin Tadlock for some WordPress awesomeness. See http://themehybrid.com/hybrid-core.
+All the WordPress awesomeness is put in the functions.php and some are used in theme already. Some you can put in yourself. If you are familiair with Hybrid Core then go and rebuild it yourself. 
+
+The Hybrid core functionality I did put in is:
+1. Theme support for the framework widgets.
+2. Theme support for the framework shortcodes.
+3. Theme support for the Hybrid Template Hierarchy which is more flexible.
+4. Theme support for sidebars from Hybrid core (you can also put in sidebars yourself in the functions.php.) 	Put in are primary, secondary and subsidiary. If you want more, put in the template files for these 		sidebars. 
+	*	primary: Typically shown on the side of the page as the main sidebar.
+	*	secondary: Typically shown on the side of the page within three-column layouts or as an alternative 
+	*	to the primary sidebar.
+	*	subsidiary: Typically shown somewhere above, within, or below the footer area.
+	*	header: Easy enough. Put it within the header.
+	*	before-content: Should be shown directly before the post content on a page.
+	*	after-content: Should be shown directly after the post content on a page.
+	*	after-singular: all post types that are displayed on the front end of the site.
+5. Theme support for menus. (Put in are: primary, secondary and subsidiary.)
+	*	primary:    Typically located before, within, or after the header area.
+	*	secondary:    Typically located before, within, or after the header area. However, it should be
+	 					displayed after the primary menu.
+	*	subsidiary:    Typically located before, within, or after the footer area. 	
+5. Theme support for breadcrumbs.
+6. Theme support for images.
+7. Theme support for Hybrid core stylesheets. Put in are Drop-downs and gallery.
+	*	18px:    A base reset stylesheet that set margins and line heights for 18 pixels.
+	*	20px:    A base reset stylesheet that set margins and line heights for 20 pixels.
+	*	21px:    A base reset stylesheet that set margins and line heights for 21 pixels.
+	*	22px:    A base reset stylesheet that set margins and line heights for 22 pixels.
+	*	24px:    A base reset stylesheet that set margins and line heights for 24 pixels.
+	*	25px:    A base reset stylesheet that set margins and line heights for 25 pixels.
+	*	drop-downs:    Starter set of style rules for drop-down menus.
+	*	nav-bar:    Starter set of style rules for nav-bar style drop-down menus.
+	*	gallery:    A complete stylesheet for handling gallery layouts. For use with the Cleaner Gallery 					extension. Cleaner Gallery is PHP script that fixes the WordPress [gallery] 							shortcode’s invalid HTML and removes its inline styles. It also gives you greater 						control and flexibility over how the gallery is output as a theme author.
+	*	parent:    Parent theme’s style.css file. This is only loaded if a child theme is active.
+	*	style:    Active theme’s style.css file. This is the child theme stylesheet if a child theme is 					active. 
+8. Theme layouts (need to add stylesheet support) (NOT YET!) 
+
+The first part of the functions.php is Hybrid core functionality, after that part you can put in your own functionality.
+
+
 
 Beneath is the story of the Taiga Boilerplate builder Aljan of Studio Wolf.
 
