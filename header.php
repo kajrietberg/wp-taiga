@@ -18,27 +18,29 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon-precomposed" href="apple-icon.png" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <?php wp_head(); // wp_head ?>
 
+    <?php wp_head(); ?>
 </head>
 
 <body>
     <div class="l-container">
-        <?php get_template_part( 'menu', '.......' ); // Loads the menu-........php template. ?>
+        <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 
         <header id="header">
-
             <hgroup id="branding">
-                <h1 id="site-title"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+                <h1 id="site-title"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                <?php bloginfo( 'name' ); ?></a></h1>
                 <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
             </hgroup><!-- #branding -->
-
         </header><!-- #header -->
-    <div class="l-full">
 
-            <?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'container' => 'nav', 'separator' => '>', 'before' => __( 'You are here:', '.........' ) ) ); ?>  
+        <?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
+        
+        <div class="l-full">
+
+            <?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'container' => 'nav', 'separator' => '>', 'before' => __( 'You are here:', 'wp-taiga' ) ) ); ?>  
             

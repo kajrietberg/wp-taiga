@@ -1,19 +1,26 @@
-﻿
+﻿<?php get_header(); ?>
 
-<?php get_header(); // Loads the header.php template. ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <div id="content" class="hfeed">
+		<h2>
+			<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to 
+			<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		</h2>
+			<p><?php the_category(', '); ?></p>		 					
+			<div class="entry">
+				<?php the_content('read more'); ?>
+			</div>
+ 					
+ 	<?php endwhile; ?>						
 
-        <?php get_template_part( 'loop-meta' ); // Loads the loop-meta.php template. ?>
+			<div class="navigation">
+ 				<?php posts_nav_link('<<>>','Newer','Older'); ?>
+ 			</div>	
+	<?php else : ?>
+ 			<h2 class="center">Not Found</h2>
+ 			<p class="center">
+			<?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
 
-        <?php get_template_part( 'loop' ); // Loads the loop.php template. ?>
+	<?php endif; ?>			
 
-        <?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
-
-    </div><!-- #content -->
-
-<?php get_footer(); // Loads the footer.php template. ?>
-
-    
-        
-   
+<?php get_footer(); ?>
