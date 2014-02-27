@@ -34,5 +34,11 @@
 @import "stylesheets/shared-components/_tabs";
 @import "stylesheets/shared-components/_panels";
 
+// User interface
+// Specifiek user interface css
+
+// Specific WordPress css 
+@import "stylesheets/user-interface/_wp-stuff";
+
 // Print
 @import "stylesheets/core/_print";

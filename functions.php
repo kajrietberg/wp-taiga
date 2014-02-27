@@ -55,10 +55,18 @@ function wp_taiga_theme_setup() {
 	/* Nicer [gallery] shortcode implementation. */
 	add_theme_support( 'cleaner-gallery' );
 
-
-	/*** Action and filters go here. ***/
+		/*** Action and filters go here. ***/
 	/* Register your own sidebars here and put in the actually code further below */
 	add_action( 'widgets_init', 'wp_taiga_register_sidebars', 11 );
+
+	apply_filters( 'get_theme_layout', $l );
+
+	add_theme_support(
+		'theme-layouts',
+			array( 'full', 'one-third', 'two-third', 'half' ),
+			array( 'default' => 'full', 'customize' => true )
+	);
+
 }
 
 /*** register your own functionality from here ***/

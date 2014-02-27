@@ -1,5 +1,5 @@
-$(function() {
+$(document).ready(function() {
 
-    // Insert your javascript here
-    
+		
 });
+		

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="nl">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
@@ -26,21 +26,17 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+
     <div class="l-container">
         <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 
-        <header id="header">
-            <hgroup id="branding">
-                <h1 id="site-title"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+        <header class="header">
+            <hgroup class="branding">
+                <h1 class="site-title"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                 <?php bloginfo( 'name' ); ?></a></h1>
-                <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+                <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
             </hgroup><!-- #branding -->
         </header><!-- #header -->
 
-        <?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
-        
-        <div class="l-full">
-
-            <?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'container' => 'nav', 'separator' => '>', 'before' => __( 'You are here:', 'wp-taiga' ) ) ); ?>  
-            
+        <?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?> 
