@@ -5,7 +5,6 @@
 	</footer>		
 	<!-- Scripts -->
     <script src="scripts/interface.js"></script>
-    <script src="scripts/jquery-2.0.3.min.js"></script>
 	<?php wp_footer(); ?>    
  </body>
 </html>

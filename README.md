@@ -45,6 +45,11 @@ The Hybrid core functionality I did put in is:
 
 The first part of the functions.php is Hybrid core functionality, after that part you can put in your own functionality.
 
+Changes of the Taiga Boilerplate put into this WP theme
+--------------------
+https://github.com/studiowolf/taiga-boilerplate/commits/master
+Starting point: november 4th 2013
+* up to february 27th
 
 
 
@@ -66,6 +71,7 @@ Changes
 ---------------------
 
 * 25 october: buttons, forms etc can be found in the folder 'shared-components'. Modules like 'product', 'blog-article', 'shopping-cart' can be created in the folder 'modules'.
+
 
 Why Taiga Boilerplate?
 ---------------------

@@ -56,20 +56,22 @@ function wp_taiga_theme_setup() {
 	add_theme_support( 'cleaner-gallery' );
 
 		/*** Action and filters go here. ***/
-	/* Register your own sidebars here and put in the actually code further below */
+	/* Register your own sidebars here and put in the actually code further below or if not
+	 * take this following line out */
 	add_action( 'widgets_init', 'wp_taiga_register_sidebars', 11 );
 
-	apply_filters( 'get_theme_layout', $l );
+	/*Have to get layout-theme support working, someday */
+	//apply_filters( 'get_theme_layout', $l );
 
-	add_theme_support(
-		'theme-layouts',
-			array( 'full', 'one-third', 'two-third', 'half' ),
-			array( 'default' => 'full', 'customize' => true )
-	);
+	//add_theme_support(
+	//	'theme-layouts',
+	//		array( 'full', 'one-third', 'two-third', 'half' ),
+	//		array( 'default' => 'full', 'customize' => true )
+	//);
 
 }
 
-/*** register your own functionality from here ***/
+/*** register your own functionality from here, like sidebars, custom post types ***/
 
 /*
 *function wp_taiga_register_sidebars() {

@@ -23,7 +23,7 @@
 
     <footer class="page-footer">
 
-        <?php the_tags( '<span class="tags">' . __( 'Tags:', 'wp-taiga' ) . '</span> ', ', ', '' ); ?><?php edit_post_link( __( 'Edit', 'wp-taiga' ), '<span class="edit-link button-soft right">', '</span>' ); ?>
+        <?php the_tags( '<span class="tags">' . __( 'Tags:', 'wp-taiga' ) . ' ', ' ', '</span>' ); ?><?php edit_post_link( __( 'Edit', 'wp-taiga' ), '<span class="edit-link button-soft right">', '</span>' ); ?>
 
     </footer><!-- .page-footer -->
 
