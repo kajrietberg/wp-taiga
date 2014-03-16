@@ -13,7 +13,7 @@
 					<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to 
 					<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 				</h2>
-					<p class="byline"><?php the_category(', '); ?></p>	
+					<p class="byline"><?php _e( 'Filed under: ', 'wp-taiga' ) ?><?php the_category(', '); ?></p>	
 			</header>
 
 				<div class="entry">
@@ -23,8 +23,18 @@
  				
  	<?php endwhile; ?>						
 
-			<nav class="navigation">
- 				<?php posts_nav_link('<<>>','Newer','Older'); ?>
+			<nav class="navigation pagination">
+ 				<?php 
+ 				global $wp_query;
+
+				$big = 999999999; // need an unlikely integer
+ 				echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				'format' => '?paged=%#%',
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $wp_query->max_num_pages
+				) ); 
+				?> 
  			</nav>	
 
 	<?php else : ?>

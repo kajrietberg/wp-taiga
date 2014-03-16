@@ -1,44 +1,115 @@
-﻿//  Taiga Boilerplate
-//  Copyright 2013 by Studio Wolf
-//  Licensed under the MIT license
+﻿/*
+Theme Name: WP-Taiga Starters Theme
+Theme URI: http://kajrietberg.nl/wp-taiga
+Author: Aljan en Kaj Rietberg
+Author URI: http://kajrietberg.nl
+Description: WordPress starter theme based on the Taiga boilerplate.
+Version: 0.7
+License: GNU General Public License
+License URI: license.txt
+Text Domain: wp-taiga
+Domain Path: /languages/
+Tags:
+*/
+      
+/*------------------------------------*\
+    STYLE.SCSS
+\*------------------------------------*/
+/**
+ * Here we start to pull everything together into one big stylesheet.
+ *
+ * SETUP............Settings, tools, mixins, etc.
+ * GENERIC..........normalize.css, reset, shared styles, etc.
+ * BASE.............Basic HTML elements.
+ * OBJECTS..........Objects, abstractions, design patterns.
+ * GUI..............Components and modules.
+ * TRUMPS...........Helpers, overrides, ‘trump-cards’.
+ */
 
-//  Run the following SASS command: 'sass --watch stylesheets --style compressed'
-//  Make sure you set the variables below (find the grid documentation in core/_grid.scss)
+@charset "UTF-8";
 
-// =========== Includes
+/*------------------------------------*\
+    #SETUP
+\*------------------------------------*/
+/**
+ * Settings, variables and tools.
+ */
 
-// Core
-@import "stylesheets/core/_settings"; // Set up your settings and variables first
-@import "stylesheets/core/_mixins";
-@import "stylesheets/core/_grid";
-@import "stylesheets/core/_base";
-@import "stylesheets/core/_states";
-@import "stylesheets/core/_layout";
+@import "css/1-settings/_settings"; // Set up your settings and variables first
+@import "css/2-tools/_mixins";
 
-// Modules
-// Modules are connected to a specific piece of content and can't be used without it. Example: the module 'product' can't be used for a 'blog-article'.
-@import "stylesheets/modules/_product";
 
-// Shared components
-// Components can be used generic through the application and are not connected to content. Example: the component 'buttons' can be used in module 'product', 'blog-article' etc.
-@import "stylesheets/shared-components/_figure";
-@import "stylesheets/shared-components/_quote";
-@import "stylesheets/shared-components/_forms";
-@import "stylesheets/shared-components/_tables";
-@import "stylesheets/shared-components/_labels";
-@import "stylesheets/shared-components/_buttons";
-@import "stylesheets/shared-components/_icons";
-@import "stylesheets/shared-components/_messages";
-@import "stylesheets/shared-components/_pagination";
-@import "stylesheets/shared-components/_modal";
-@import "stylesheets/shared-components/_tabs";
-@import "stylesheets/shared-components/_panels";
 
-// User interface
-// Specifiek user interface css
 
-// Specific WordPress css 
-@import "stylesheets/user-interface/_wp-stuff";
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+/**
+ * These are far reaching styles that affect and underpin every element on the
+ * page, e.g. `* {}`.
+ */
+@import "css/3-generic/_grid";
+@import "css/3-generic/_layout";
+@import "css/3-generic/_print";
 
-// Print
-@import "stylesheets/core/_print";
+
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/**
+ * These are base HTML elements, things with no classes on them, e.g. `h1 {}`,
+ * `blockquote {}`.
+ */
+
+@import "css/4-base/_base";
+
+
+
+
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+/**
+ * These are design-free objects, abstractions and design patterns. These create
+ * constructs that you lay your designs over.
+ */
+@import "css/5-objects/_figure";
+@import "css/5-objects/_quote";
+@import "css/5-objects/_forms";
+@import "css/5-objects/_tables";
+@import "css/5-objects/_labels";
+@import "css/5-objects/_buttons";
+@import "css/5-objects/_icons";
+@import "css/5-objects/_messages";
+@import "css/5-objects/_pagination";
+@import "css/5-objects/_modal";
+@import "css/5-objects/_tabs";
+@import "css/5-objects/_panels";
+
+
+
+
+/*------------------------------------*\
+    #GUI
+\*------------------------------------*/
+/**
+ * These are your components and modules; things like buttons, accordions,
+ * carousels, etc.
+ */
+@import "css/6-gui/_product";
+
+
+
+
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+/**
+ * These are helper classes and overrides that should take precedence over all
+ * other styles, e.g. `.float--left {}`.
+ */
+
+@import "css/7-trumps/_states";
+@import "css/7-trumps/_wp-stuff";
+

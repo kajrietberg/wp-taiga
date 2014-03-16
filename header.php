@@ -10,16 +10,14 @@
     
 
     <title><?php hybrid_document_title(); ?></title>
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    
+       
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
 
     <link href="<?php echo get_stylesheet_uri(); ?>" type="text/css" rel="stylesheet">
-     <link href="<?php echo get_template_directory_uri(); ?>/stylesheets/.........css" rel="stylesheet" type="text/css">
+    <link href="<?php echo get_template_directory_uri(); ?>/css/.........css" rel="stylesheet" type="text/css">
 
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon-precomposed" href="apple-icon.png" />

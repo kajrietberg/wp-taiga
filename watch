@@ -3,7 +3,16 @@
 # This is a handy wrapper for running our Sass compilation command. From the
 # command line, simply `cd` to this directory and run `$ ./watch`.
 
-# No minification
-sass --watch styles.scss:style.css --style compressed
+# Default Sass style is :nested
+# sass --watch style.scss:style.css --style nested
+
+# Focus on the selectors not on properties :compact
+# sass --watch style.scss:style.css --style compact
+
+# Minimum amount of space possible :compressed
+ sass --watch style.scss:style.css --style compressed
+
+# No minification, everything is copied, except the comments starting with //
+# sass --watch style.scss:style.css --style expanded
 
 exit 0

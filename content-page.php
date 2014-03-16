@@ -11,7 +11,7 @@
 		<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 	</header><!-- .page-header -->
 
-	<div class="entry">
+	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
