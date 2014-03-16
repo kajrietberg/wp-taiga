@@ -3,16 +3,19 @@
 \*------------------------------------*/
 
 
-article:
-.article-header
-.byline
-.entry
-
-
-
-.article-header
-.article-title
-.byline
-.article-content
-.article-footer
-.tags en .edit-link
+article {}
+.article-header {
+	margin-top: 1em;
+}
+.article-title {}
+.byline {
+	font-size: 0.85em;
+	margin-left: 1em;
+}
+.entry {}
+.article-content {}
+.article-footer {
+	margin-bottom: 1em;
+}
+.tags {}
+.edit-link {}

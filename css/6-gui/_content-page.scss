@@ -2,12 +2,11 @@
     #CONTENT-PAGE
 \*------------------------------------*/
 
+#content {}
 
-#content
-
-
-
-.page-header
-.page-title
-.entry
-.page-links
+.page-header {
+	margin-top: 1em;
+}
+.page-title {}
+.entry {}
+.page-links {}

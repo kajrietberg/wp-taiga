@@ -46,12 +46,12 @@ Tags:
 \*------------------------------------*/
 /**
  * These are far reaching styles that affect and underpin every element on the
- * page, e.g. `* {}`.
+ * page, e.g. `* {}`. Quickfix is was is says, when there is more time, then fix it well.
  */
 @import "css/3-generic/_grid";
 @import "css/3-generic/_layout";
 @import "css/3-generic/_print";
-
+@import "css/3-generic/_quickfix";
 
 
 /*------------------------------------*\
@@ -74,18 +74,18 @@ Tags:
  * These are design-free objects, abstractions and design patterns. These create
  * constructs that you lay your designs over.
  */
-@import "css/5-objects/_figure";
-@import "css/5-objects/_quote";
-@import "css/5-objects/_forms";
-@import "css/5-objects/_tables";
-@import "css/5-objects/_labels";
-@import "css/5-objects/_buttons";
-@import "css/5-objects/_icons";
-@import "css/5-objects/_messages";
-@import "css/5-objects/_pagination";
-@import "css/5-objects/_modal";
-@import "css/5-objects/_tabs";
-@import "css/5-objects/_panels";
+//@import "css/5-objects/_figure";
+//@import "css/5-objects/_quote";
+//@import "css/5-objects/_forms";
+//@import "css/5-objects/_tables";
+//@import "css/5-objects/_labels";
+//@import "css/5-objects/_buttons";
+//@import "css/5-objects/_icons";
+//@import "css/5-objects/_messages";
+//@import "css/5-objects/_pagination";
+//@import "css/5-objects/_modal";
+//@import "css/5-objects/_tabs";
+//@import "css/5-objects/_panels";
 
 
 
@@ -97,9 +97,16 @@ Tags:
  * These are your components and modules; things like buttons, accordions,
  * carousels, etc.
  */
-@import "css/6-gui/_product";
-
-
+//@import "css/6-gui/_product";
+//@import "css/6-gui/_article";
+//@import "css/6-gui/_breadcrumbs";
+//@import "css/6-gui/_content-page";
+//@import "css/6-gui/_footer";
+//@import "css/6-gui/_header";
+//@import "css/6-gui/_menu";
+//@import "css/6-gui/_navigation";
+//@import "css/6-gui/_search";
+//@import "css/6-gui/_sidebar";
 
 
 /*------------------------------------*\

@@ -10,7 +10,7 @@
 # sass --watch style.scss:style.css --style compact
 
 # Minimum amount of space possible :compressed
- sass --watch style.scss:style.css --style compressed
+ sass --watch styles.scss:style.css --style compressed
 
 # No minification, everything is copied, except the comments starting with //
 # sass --watch style.scss:style.css --style expanded
