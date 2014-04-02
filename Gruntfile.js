@@ -39,20 +39,32 @@ module.exports = function(grunt) {
           }
       }    
     },
-      
+
+    makepot: {
+        target: {
+            options: {
+                cwd: '',
+                domainPath: 'languages',
+                type: 'wp-theme'
+            }
+        }
+    },
+    
+
   });
 
   // Load Grunt plugins and tasksdifferent tasks. Each task has its own row.
   //grunt.loadNpmTasks('');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');  
-
+  grunt.loadNpmTasks('grunt-contrib-sass'); 
+  grunt.loadNpmTasks('grunt-wp-i18n');
 
   //Custom tasks will be run with grunt 'TaksName' on the commandline
 
   // Default task(s).
   //grunt.registerTask('default');
-
+  grunt.registerTask('pot', ['makepot']);
+  
   grunt.registerTask('test', ['sass:dev', 'watch']);
 
   grunt.registerTask('deploy', ['sass:prod']);
