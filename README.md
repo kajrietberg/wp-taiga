@@ -51,7 +51,15 @@ https://github.com/studiowolf/taiga-boilerplate/commits/master
 Starting point: november 4th 2013
 * up to february 27th
 
-
+TODO
+--------------------
+* making the theme well accessible (until then use the wpaccessibility plugin)
+* Grunt toevoegen (http://remcotolsma.nl/2014/02/wordpress-plugins-en-grunt/):
+	- pot bestand aanmaken. https://github.com/blazersix/grunt-wp-i18n
+	- php testen
+	- afbeelding optimalisatie
+	- http://www.danielauener.com/yeoman-wordpress-theme-generator/ en https://github.com/claudiosmweb/wordpress-plugin-boilerplate en http://themergency.com/grunt-for-wordpress-developers/ en http://mattbanks.me/grunt-wordpress-development-deployments/ en http://www.khoapham.me/blog/set-up-grunt-with-wordpress/ en https://www.npmjs.org/search?q=wordpress Bekijken.
+	-
 
 Beneath is the story of the Taiga Boilerplate builder Aljan of Studio Wolf.
 

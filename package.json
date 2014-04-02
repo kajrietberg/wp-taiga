@@ -1,0 +1,23 @@
+{
+  "name": "wp-taiga",
+  "version": "0.7.0",
+  "description": "My WP Starter theme",
+  "main": "index.php",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WordPress",
+    "Taiga"
+  ],
+  "author": "Kaj Rietberg",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
