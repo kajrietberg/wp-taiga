@@ -55,11 +55,9 @@ TODO
 --------------------
 * making the theme well accessible (until then use the wpaccessibility plugin)
 * Grunt toevoegen (http://remcotolsma.nl/2014/02/wordpress-plugins-en-grunt/):
-	- pot bestand aanmaken. https://github.com/blazersix/grunt-wp-i18n
-	- php testen
+	- php testen (https://github.com/SaschaGalley/grunt-phpcs)
 	- afbeelding optimalisatie
-	- http://www.danielauener.com/yeoman-wordpress-theme-generator/ en https://github.com/claudiosmweb/wordpress-plugin-boilerplate en http://themergency.com/grunt-for-wordpress-developers/ en http://mattbanks.me/grunt-wordpress-development-deployments/ en http://www.khoapham.me/blog/set-up-grunt-with-wordpress/ en https://www.npmjs.org/search?q=wordpress Bekijken.
-	-
+	- https://github.com/claudiosmweb/wordpress-plugin-boilerplate en http://themergency.com/grunt-for-wordpress-developers/ en http://mattbanks.me/grunt-wordpress-development-deployments/ en http://www.khoapham.me/blog/set-up-grunt-with-wordpress/ en https://www.npmjs.org/search?q=wordpress Bekijken.
 
 Beneath is the story of the Taiga Boilerplate builder Aljan of Studio Wolf.
 

@@ -8,10 +8,17 @@ module.exports = function(grunt) {
         options: {
           livereload: true,
         },
-        scss: {
-          files: ['css/syle.scss', 'css/**/*.scss'],
-          tasks: ['sass:dev']
+        livereload: {
+          files: [ '*.html', '*.php' ],
         },
+        scss: {
+          files: ['styles.scss', 'css/**/*.scss'],
+          tasks: ['sass:dev', 'notify:sass']
+        },
+        images: {
+          files: ['src/images/*.{png,jpg,gif}'],
+          tasks: ['imageoptim']
+         },
         configFiles: {
           files: [ 'Gruntfile.js'],
           options: {
@@ -40,6 +47,13 @@ module.exports = function(grunt) {
       }    
     },
 
+    uglify: {
+          build: {
+            src: 'scripts/interface.js',
+            dest: 'scripts/script.min.js'
+          }
+        },
+
     makepot: {
         target: {
             options: {
@@ -50,6 +64,45 @@ module.exports = function(grunt) {
         }
     },
     
+    notify: {
+      makepot: {
+        options: {
+          title: 'POT Complete',  // optional
+          message: 'POT is made', //required
+        }
+      }, 
+      sass: {
+        options: {
+          title: 'Sass Task',  // optional
+          message: 'Sass live compiled!!!', //required
+        }
+      },
+      done: {
+        options: {
+          title: 'Deploy Complete', // optional
+          message: 'Everything deployed', //required
+        }
+      } 
+    },
+
+    imageoptim: {
+      myPngs: {
+        options: {
+          jpegMini: false,
+          imageAlpha: true,
+          quitAfter: true
+        },
+        src: ['images/png']
+      },
+      myJpgs: {
+        options: {
+          jpegMini: true,
+          imageAlpha: false,
+          quitAfter: true
+        },
+        src: ['images/jpg']
+      }
+    },
 
   });
 
@@ -58,14 +111,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass'); 
   grunt.loadNpmTasks('grunt-wp-i18n');
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-imageoptim');
 
   //Custom tasks will be run with grunt 'TaksName' on the commandline
 
   // Default task(s).
   //grunt.registerTask('default');
-  grunt.registerTask('pot', ['makepot']);
+  grunt.registerTask('pot', ['makepot', 'notify:makepot']);
   
-  grunt.registerTask('test', ['sass:dev', 'watch']);
+  grunt.registerTask('test', ['sass:dev', 'imageoptim', 'watch', 'notify:watch']);
 
-  grunt.registerTask('deploy', ['sass:prod']);
+  grunt.registerTask('deploy', ['sass:prod', 'uglify', 'notify:done']);
 };
