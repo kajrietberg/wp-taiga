@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           tasks: ['sass:dev', 'notify:sass']
         },
         images: {
-          files: ['src/images/*.{png,jpg,gif}'],
+          files: ['images/*.{png,jpg,gif}'],
           tasks: ['imageoptim']
          },
         configFiles: {
@@ -45,6 +45,16 @@ module.exports = function(grunt) {
             'style.css': 'styles.scss'       // 'destination': 'source'
           }
       }    
+    },
+
+    concat: {
+      dist: {
+        src: [
+        'scripts/one.js', // js file
+        'scripts/two.js', // js file nr 2
+        ],
+        dest: 'scripts/interface.js',
+      }
     },
 
     uglify: {
@@ -92,7 +102,7 @@ module.exports = function(grunt) {
           imageAlpha: true,
           quitAfter: true
         },
-        src: ['images/png']
+        src: ['images/**/*.png']
       },
       myJpgs: {
         options: {
@@ -100,7 +110,7 @@ module.exports = function(grunt) {
           imageAlpha: false,
           quitAfter: true
         },
-        src: ['images/jpg']
+        src: ['images/**/*.jpg']
       }
     },
 
@@ -112,6 +122,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass'); 
   grunt.loadNpmTasks('grunt-wp-i18n');
   grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-imageoptim');
 
@@ -121,7 +132,7 @@ module.exports = function(grunt) {
   //grunt.registerTask('default');
   grunt.registerTask('pot', ['makepot', 'notify:makepot']);
   
-  grunt.registerTask('test', ['sass:dev', 'imageoptim', 'watch', 'notify:watch']);
+  grunt.registerTask('test', ['sass:dev', 'watch', 'notify:watch']);
 
-  grunt.registerTask('deploy', ['sass:prod', 'uglify', 'notify:done']);
+  grunt.registerTask('deploy', ['sass:prod', 'imageoptim', 'concat', 'uglify', 'notify:done']);
 };

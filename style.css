@@ -363,6 +363,224 @@ dl.advanced dd {
  * These are design-free objects, abstractions and design patterns. These create
  * constructs that you lay your designs over.
  */
+figure {
+  display: inline-block;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+figure.figure--left {
+  clear: left;
+  float: left;
+  padding-right: 1.5em;
+  width: 50%;
+}
+figure.figure--right {
+  clear: right;
+  float: right;
+  padding-left: 1.5em;
+  width: 50%;
+}
+figure img {
+  display: block;
+  width: 100%;
+}
+figure figcaption {
+  color: blue;
+}
+
+blockquote {
+  quotes: none;
+  color: #849a93;
+  font: italic 1.2em Georgia, serif;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 0 0 0 2em;
+  position: relative;
+}
+blockquote:before {
+  color: #cad3d0;
+  content: "\201C";
+  display: block;
+  font-size: 5em;
+  left: -0.15em;
+  position: absolute;
+  top: 0.25em;
+}
+blockquote cite {
+  color: #5f736c;
+  display: block;
+  font-size: 0.85em;
+}
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=tel],
+input[type=url],
+textarea,
+select {
+  -webkit-appearance: none;
+  border: 1px solid #aebcb8;
+  border-radius: 0.15em;
+  box-shadow: inset 0px 1px 3px rgba(14, 17, 16, 0.1);
+  color: #0e1110;
+  display: block;
+  font-family: sans-serif;
+  font-size: inherit;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0.6em;
+  vertical-align: baseline;
+  width: 100% !important;
+  -webkit-transition: border 100ms;
+  transition: border 100ms;
+}
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #92a59f;
+  box-shadow: 0px 0px 4px rgba(14, 17, 16, 0.3);
+  color: #0e1110;
+  outline: 0;
+}
+
+textarea {
+  display: block;
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+
+select {
+  -webkit-appearance: menulist;
+  height: 2.85em;
+}
+
+legend {
+  border: 0;
+  display: block;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  line-height: 1.5em;
+  font-size: 1.4em;
+}
+
+ul.form {
+  clear: both;
+  list-style: none;
+  margin: 0 0 1.5em 0;
+}
+ul.form > li:before, ul.form > li:after {
+  content: "";
+  display: table;
+}
+ul.form > li:after {
+  clear: both;
+}
+ul.form > li > label {
+  clear: left;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding-top: 0.6em;
+  text-align: left;
+}
+@media (min-width: 39.33333em) {
+  ul.form > li > label {
+    float: left;
+    width: 31.25%;
+    margin-left: 0%;
+    margin-right: 2.08333%;
+    text-align: right;
+  }
+}
+ul.form > li > label:hover {
+  color: #0e1110;
+}
+ul.form div.form--fields {
+  margin-bottom: 0.5em;
+}
+@media (min-width: 39.33333em) {
+  ul.form div.form--fields {
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+ul.form div.form--fields p, ul.form div.form--fields small {
+  display: block;
+  margin: 0.25em 0;
+}
+ul.form div.form--fields p.form--description {
+  margin: 0.6em 0;
+}
+
+ul.form--checklist {
+  list-style: none;
+  margin: 0.6em 0;
+}
+ul.form--checklist li {
+  margin: 0.5em 0;
+}
+ul.form--checklist input {
+  display: inline;
+  margin-right: 0.8em;
+}
+ul.form--checklist label {
+  clear: both;
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+  font-weight: 300;
+}
+ul.form--checklist label:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+li.form--error label {
+  color: #f3490d;
+}
+li.form--error label:hover {
+  color: #7a2406;
+}
+li.form--error input {
+  border: 1px solid #f3490d;
+  box-shadow: 0px 0px 3px #f56e3e, inset 0 0 0;
+}
+li.form--error input:focus {
+  border: 1px solid #f3490d;
+}
+li.form--error ul.form--errors {
+  color: #f3490d;
+  list-style: none;
+  margin: 0.35em 0;
+}
+li.form--error ul.form--errors li {
+  font-size: 0.85em;
+}
+
 /*------------------------------------*\
     #GUI
 \*------------------------------------*/

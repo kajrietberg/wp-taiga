@@ -56,9 +56,10 @@ TODO
 * making the theme well accessible (until then use the wpaccessibility plugin)
 * Grunt toevoegen (http://remcotolsma.nl/2014/02/wordpress-plugins-en-grunt/):
 	- php testen (https://github.com/SaschaGalley/grunt-phpcs)
-	- afbeelding optimalisatie
-	- https://github.com/claudiosmweb/wordpress-plugin-boilerplate en http://themergency.com/grunt-for-wordpress-developers/ en http://mattbanks.me/grunt-wordpress-development-deployments/ en http://www.khoapham.me/blog/set-up-grunt-with-wordpress/ en https://www.npmjs.org/search?q=wordpress Bekijken.
+	- autoprefixer of compass
 
+
+	
 Beneath is the story of the Taiga Boilerplate builder Aljan of Studio Wolf.
 
 Taiga Boilerplate
